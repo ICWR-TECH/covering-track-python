@@ -10,7 +10,7 @@ def replace_ip(xpath,ip):
         if os.path.isfile(xpath+x):
             try:
                 f=open(xpath+x,"w")
-                f.write(open(x,"r").read().replace(ip,"127.0.0.1"))
+                f.write(open(xpath+x,"r").read().replace(ip,"127.0.0.1"))
                 f.close()
             except:
                 pass
